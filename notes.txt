@@ -4,13 +4,24 @@ git push -u origin master
 ##############################################################
 # Делается единожды после клонирования
 ##############################################################
-mpm install
+
+# Если нужно обновить все пакеты в package.json
+npm i -g npm-check-updates
+npm fund
+ncu -u
+
+# Установить пакеты
+npm install
+
+# Если есть ошибка "fix the upstream dependency conflict or retry npm err..."
+npm config set legacy-peer-deps true  
+# или
+npm install --legacy-peer-deps
 
 # Установить Material
 # В процессе выбрать тему! Стрелочками!
+  
   ng add @angular/material
-
-ng add @angular/cdk
 
 # Если ошибка: "Так как выполнение сценариев отключено в этой системе. Для получения дополнительных сведений см..."
   PowerShell Admin: Set-ExecutionPolicy RemoteSigned
