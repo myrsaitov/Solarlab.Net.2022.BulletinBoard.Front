@@ -2,16 +2,16 @@
 # Основные компоненты интерфейса
 # Вызываются в "app.component.html"
 ##############################################################
-  ng generate component app-components/ui-elements/top-bar
-  ng generate component app-components/ui-elements/bottom-bar
-  ng generate component app-components/ui-elements/left-column
-  ng generate component app-components/ui-elements/right-column
+  ng generate component app-components/top-bar
+  ng generate component app-components/bottom-bar
+  ng generate component app-components/left-column
+  ng generate component app-components/right-column
 
 ##############################################################
 # Страницы роутера
 ##############################################################
-  ng generate component app-components/router-pages/dashboard
-  ng generate component app-components/router-pages/view
+  ng generate component app-components/router-page-dashboard
+  ng generate component app-components/router-page-view
 
 
 ##############################################################
@@ -23,7 +23,7 @@
     BrowserModule,
     RouterModule.forRoot([
       { path: '', component: DashboardComponent },
-      { path: 'congratulations/:congratulationId', component: ViewComponent },
+      { path: 'advertisements/:advertisementId', component: ViewComponent },
     ])
   ],
 ...
