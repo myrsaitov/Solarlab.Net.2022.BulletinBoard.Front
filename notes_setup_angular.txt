@@ -1,0 +1,37 @@
+##############################################################
+# Делается единожды после клонирования
+##############################################################
+
+# Если нужно обновить все пакеты в package.json
+  npm i -g npm-check-updates
+  npm fund
+  ncu -u
+
+# Установить пакеты
+  npm install
+
+# Если есть ошибка "fix the upstream dependency conflict or retry npm err..."
+  npm config set legacy-peer-deps true  
+
+# Установить Material
+# В процессе выбрать тему! Стрелочками!
+  
+  ng add @angular/material
+
+# Если ошибка: "Так как выполнение сценариев отключено в этой системе. Для получения дополнительных сведений см..."
+  PowerShell Admin: Set-ExecutionPolicy RemoteSigned
+
+
+# Изменить файл tsconfig.json:
+  "compilerOptions": {
+    ...
+
+    // Чтобы не было проверки на обязательное инициализирование переменных
+    "forceConsistentCasingInFileNames": true,
+
+    // Чтобы не было строгой проверки типа аргумента
+    "strict": false,
+
+    ...
+  }
+  

@@ -1,0 +1,29 @@
+##############################################################
+# Основные компоненты интерфейса
+# Вызываются в "app.component.html"
+##############################################################
+  ng generate component app-components/ui-elements/top-bar
+  ng generate component app-components/ui-elements/bottom-bar
+  ng generate component app-components/ui-elements/left-column
+  ng generate component app-components/ui-elements/right-column
+
+##############################################################
+# Страницы роутера
+##############################################################
+  ng generate component app-components/router-pages/dashboard
+  ng generate component app-components/router-pages/view
+
+
+##############################################################
+# Прикрепление URI к страницам роутера
+# Файл: "app.modules.ts"
+##############################################################
+...
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot([
+      { path: '', component: DashboardComponent },
+      { path: 'congratulations/:congratulationId', component: ViewComponent },
+    ])
+  ],
+...
