@@ -1,42 +1,34 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './app-components/ui-elements/top-bar/top-bar.component';
-import {RouterModule} from "@angular/router";
-import { DashboardComponent } from './app-components/router-pages/dashboard/dashboard.component';
-import { ViewComponent } from './app-components/router-pages/view/view.component';
-import { BottomBarComponent } from './app-components/ui-elements/bottom-bar/bottom-bar.component';
-import { LeftColumnComponent } from './app-components/ui-elements/left-column/left-column.component';
-import { RightColumnComponent } from './app-components/ui-elements/right-column/right-column.component';
-import {MatGridListModule} from "@angular/material/grid-list";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {AccountCardComponent} from "./app-components/ui-elements/account-card/accountCard.component";
-import {VirtualScrollerModule} from "ngx-virtual-scroller";
-
+import { BoardTopBarAccountComponent } from './app-components/board-top-bar-account/board-top-bar-account.component';
+import { BoardTopBarMainMenuComponent } from './app-components/board-top-bar-main-menu/board-top-bar-main-menu.component';
+import { BoardTopBarSearchComponent } from './app-components/board-top-bar-search/board-top-bar-search.component';
+import { BoardLeftColumnCategoriesComponent } from './app-components/board-left-column-categories/board-left-column-categories.component';
+import { BoardRightColumnTagsComponent } from './app-components/board-right-column-tags/board-right-column-tags.component';
+import { BoardRouterPageDashboardComponent } from './app-components/board-router-page-dashboard/board-router-page-dashboard.component';
+import { BoardRouterPageViewComponent } from './app-components/board-router-page-view/board-router-page-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopBarComponent,
-    DashboardComponent,
-    ViewComponent,
-    BottomBarComponent,
-    LeftColumnComponent,
-    RightColumnComponent,
-    AccountCardComponent
+    BoardTopBarAccountComponent,
+    BoardTopBarMainMenuComponent,
+    BoardTopBarSearchComponent,
+    BoardLeftColumnCategoriesComponent,
+    BoardRightColumnTagsComponent,
+    BoardRouterPageDashboardComponent,
+    BoardRouterPageViewComponent
   ],
-    imports: [
-        BrowserModule,
-        RouterModule.forRoot([
-            {path: '', component: DashboardComponent},
-            {path: 'congratulations/:congratulationId', component: ViewComponent},
-        ]),
-        MatGridListModule,
-        BrowserAnimationsModule,
-        VirtualScrollerModule
-    ],
-  providers: [  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule
+  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
