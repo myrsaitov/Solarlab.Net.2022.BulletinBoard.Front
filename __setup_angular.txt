@@ -6,14 +6,13 @@
   https://nodejs.org
 
 # Установить Angular
-  npm install -g @angular/cli
+  npm install --location=global @angular/cli
 
 # Создать новый проект
   ng new front-app --routing --style=scss --directory ./
 
-# Добавить необходимую библиотеку: 
-  #ng add @angular/material  # "Material". В процессе выбрать тему! Стрелочками!
-  ng add ng-zorro-antd  # "NG-Zorro"
+# Добавить "NG-Zorro":
+  ng add ng-zorro-antd
 
 # Добавить в файл "tsconfig.json":
 
@@ -51,9 +50,8 @@
 # Если есть ошибка "fix the upstream dependency conflict or retry npm err..."
   npm config set legacy-peer-deps true  
 
-# Добавить необходимую библиотеку: 
-  #ng add @angular/material  # "Material". В процессе выбрать тему! Стрелочками!
-  ng add ng-zorro-antd  # "NG-Zorro"
+# Добавить "NG-Zorro": 
+  ng add ng-zorro-antd
 
 # Если ошибка: "Так как выполнение сценариев отключено в этой системе. Для получения дополнительных сведений см..."
   PowerShell Admin: Set-ExecutionPolicy RemoteSigned

@@ -28,10 +28,6 @@
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
-    "strictTemplates": true,
-    // Чтобы не было проверки на обязательное инициализирование переменных
-    "forceConsistentCasingInFileNames": true,
-    // Чтобы не было строгой проверки типа аргумента
-    "strict": false
+    "strictTemplates": true
   }
 }

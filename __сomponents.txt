@@ -2,17 +2,17 @@
 # Основные компоненты интерфейса
 # Вызываются в "app.component.html"
 ##############################################################
-  ng generate component app-components/board-top-bar-account
-  ng generate component app-components/board-top-bar-main-menu
-  ng generate component app-components/board-top-bar-search
-  ng generate component app-components/board-left-column-categories
-  ng generate component app-components/board-right-column-tags
+  ng generate component components/board-top-bar-account
+  ng generate component components/board-top-bar-main-menu
+  ng generate component components/board-top-bar-search
+  ng generate component components/board-left-column-categories
+  ng generate component components/board-right-column-tags
 
 ##############################################################
 # Страницы роутера
 ##############################################################
-  ng generate component app-components/board-router-page-dashboard
-  ng generate component app-components/board-router-page-view
+  ng generate component pages/dashboard
+  ng generate component pages/view
 
 
 ##############################################################
