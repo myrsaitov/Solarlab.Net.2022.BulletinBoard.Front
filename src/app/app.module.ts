@@ -11,6 +11,17 @@ import { BoardLeftColumnCategoriesComponent } from './app-components/board-left-
 import { BoardRightColumnTagsComponent } from './app-components/board-right-column-tags/board-right-column-tags.component';
 import { BoardRouterPageDashboardComponent } from './app-components/board-router-page-dashboard/board-router-page-dashboard.component';
 import { BoardRouterPageViewComponent } from './app-components/board-router-page-view/board-router-page-view.component';
+import { NZ_I18N } from 'ng-zorro-antd/i18n';
+import { ru_RU } from 'ng-zorro-antd/i18n';
+import { registerLocaleData } from '@angular/common';
+import ru from '@angular/common/locales/ru';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { IconsProviderModule } from './icons-provider.module';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
+
+registerLocaleData(ru);
 
 @NgModule({
   declarations: [
@@ -26,9 +37,16 @@ import { BoardRouterPageViewComponent } from './app-components/board-router-page
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    IconsProviderModule,
+    NzLayoutModule,
+    NzMenuModule
   ],
-  providers: [],
+  providers: [
+    { provide: NZ_I18N, useValue: ru_RU }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
