@@ -1,6 +1,8 @@
 ##############################################################
 # Основные компоненты интерфейса
 # Вызываются в "app.component.html"
+#
+# Указать --module=my-module.module OR --skip-import
 ##############################################################
   ng generate component components/board-top-bar-account
   ng generate component components/board-top-bar-main-menu
@@ -10,9 +12,18 @@
 
 ##############################################################
 # Страницы роутера
+# https://onlinecode.org/how-to-create-routing-module-in-angular/
 ##############################################################
-  ng generate component pages/dashboard
-  ng generate component pages/view
+  
+  # Модуль доски объявлений
+    ng generate module pages/bulleting-board --routing
+    Импортировать модуль в "app-routing.module.ts"
+  
+    # Главная страница
+    ng generate component pages/bulleting-board/main --module=bulleting-board.module
+  
+    # Просмотр объявления
+    ng generate component pages/bulleting-board/view --module=bulleting-board.module
 
 
 ##############################################################
