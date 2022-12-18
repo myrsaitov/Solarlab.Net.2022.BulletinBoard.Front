@@ -4,20 +4,20 @@
 #
 # Указать --module=my-module.module OR --skip-import
 ##############################################################
-  ng generate component components/board-top-bar-account
-  ng generate component components/board-top-bar-main-menu
-  ng generate component components/board-top-bar-search
-  ng generate component components/board-left-column-categories
-  ng generate component components/board-right-column-tags
+  ng generate component components/board-top-bar-account --module=app.module
+  ng generate component components/board-top-bar-main-menu --module=app.module
+  ng generate component components/board-top-bar-search --module=app.module
+  ng generate component components/board-left-column-categories --module=app.module
+  ng generate component components/board-right-column-tags --module=app.module
 
 ##############################################################
 # Страницы роутера
 # https://onlinecode.org/how-to-create-routing-module-in-angular/
+# Каждый модуль нужно импортировать в "app-routing.module.ts"!
 ##############################################################
   
   # Модуль доски объявлений
     ng generate module pages/bulleting-board --routing
-    Импортировать модуль в "app-routing.module.ts"
   
     # Главная страница
     ng generate component pages/bulleting-board/main --module=bulleting-board.module
